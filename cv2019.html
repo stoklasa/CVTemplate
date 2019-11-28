@@ -1,0 +1,417 @@
+<html>
+<head><meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+span.cls_004{font-family:"Century Schoolbook Bold",serif;font-size:42.0px;color:rgb(74,74,74);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_004{font-family:"Century Schoolbook Bold",serif;font-size:42.0px;color:rgb(74,74,74);font-weight:bold;font-style:normal;text-decoration: none}
+.cls_003{padding:30; border: 3px solid black;font-family:"Century",serif;font-size:32.0px;color:rgb(74,74,74);font-weight:normal;font-style:normal;text-decoration: none; left:0;}
+
+
+
+.info{
+	width:100%;
+	font-size: large;
+	display: block;
+}
+.info-item {
+	display: block;
+	padding: 0 0.5em;
+	margin-left: 1em;
+}
+.page{
+	border: 2px solid #AAAAAA;
+	margin: 0 0 0 10vw;
+}
+.container{ 
+	border: 3px solid green;
+	width:64vw;
+	position: absolute;
+	left:32vw;
+	margin-left: 2vw;
+}
+.initial{ 
+		margin:3px;
+		font-size: 2em;
+		font-size-adjust: initial;
+		text-align: center;
+		vertical-align: center;
+}
+@media screen and (min-width: 750px){
+	.info{
+		display :inline;
+	}
+	.info-item {
+		display: inline;
+		border-right: 2px solid black;
+		margin: 0;
+	}
+	.page {
+		margin: 0 10vw ;
+	}
+	.container{ 
+		width:54vw;
+	}
+	.initial{ 
+		width:20vw;
+		height:20vw;
+		min-width: 150px;
+		min-height: 150px;
+		margin:3px;
+		border: 3px solid black;
+		font-size: 12vw;
+		font-size-adjust: initial;
+		text-align: center;
+		vertical-align: center;
+	}
+}
+
+.left_col{
+	position: absolute;
+	width: 20vw;
+	padding-right: 2vw;
+	border-right: 2px solid #222222;
+	height: 97vh;
+}
+
+.area {
+	padding-top:1vw;
+	float: right;
+	font-family: "Century", serif; 
+	font-size: 1em;
+}
+
+
+
+.infobox{
+	min-height: 150px;
+	height: 22vw;
+}
+.name{
+	font-size:3em;
+}
+.item-container {
+	display: flex;
+	text-align: right;
+	border: 3px solid palevioletred;
+}
+.item-label {
+	border: 3px solid pink;
+	width: 20vw;
+	margin-left: -23vw;
+	font-family: Didot, serif;
+}
+.item{
+	border: 3px solid yellow;
+	width: 98%;
+	font-size: 1em;
+	text-align: left;
+	padding-left: 2%;
+	font-family: Helvetica, sans-serif ;
+	font-weight: 100;
+}
+.skill{
+	background-color: rgba(200,200,200,0.7);
+	margin:0.5vw 0;
+	padding-left: 2vw;
+	display:flex;
+	font-weight: 400;
+	padding-bottom: 0.5em;;
+}
+.skill-subskill {
+	padding-left: 0.25em;
+	font-weight: 100;
+}
+.skill-level {
+	background-color: red;
+	z-index: -1;
+	border: 2px dashed red;
+	height: 0.2em;
+	position:absolute;
+}
+body{
+	min-width: 700px;
+}
+span.cls_005{font-family:"Century",serif;font-size:11.0px;color:rgb(74,74,74);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_005{font-family:"Century",serif;font-size:11.0px;color:rgb(74,74,74);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_002{font-family:"Century Schoolbook Bold",serif;font-size:11.0px;color:rgb(74,74,74);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_002{font-family:"Century Schoolbook Bold",serif;font-size:11.0px;color:rgb(74,74,74);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_006{font-family:"Century",serif;font-size:11.0px;color:rgb(72,76,77);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_006{font-family:"Century",serif;font-size:11.0px;color:rgb(72,76,77);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_007{font-family:"Century Schoolbook Bold",serif;font-size:11.0px;color:rgb(72,76,77);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_007{font-family:"Century Schoolbook Bold",serif;font-size:11.0px;color:rgb(72,76,77);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_008{font-family:"Century",serif;font-size:11.0px;color:rgb(72,76,77);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_008{font-family:"Century",serif;font-size:11.0px;color:rgb(72,76,77);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_009{font-family:"Century Schoolbook Bold",serif;font-size:11.0px;color:rgb(72,76,77);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_009{font-family:"Century Schoolbook Bold",serif;font-size:11.0px;color:rgb(72,76,77);font-weight:bold;font-style:normal;text-decoration: none}
+-->
+</style>
+
+</head>
+<body>
+	<div id="root" />
+	<div id="progress" style="height:1vw;background-color: red;">
+	</div>
+
+	<div class="page">
+		<div class="left_col">
+			<div class="initial">
+				JH
+			</div>
+		</div>
+		<div id="container" class="container">
+			<div class="infobox">
+				<div class="name">
+					Jindra Hrnčíř
+				</div>
+				<div class="info">
+					<div class="info-item">
+						jindrahrncir@live.com
+					</div>
+					<div class="info-item">
+						+420 608 40 33 44	
+					</div>
+					<div class="info-item">
+						Praha, Střešovice	
+					</div>
+				</div>
+			</div>
+	
+			</div>
+		</div>
+	</div>
+	<script>
+
+		const types = {
+			NUMBER: 0,
+			STRING: 1,
+			STRINGARRAY: 2,
+			SKILL: 3,
+			EXPEREINCE: 4,
+		};
+		var DATA = {
+			summary: {
+				name: `Summary`,
+				type: types.STRING,
+				data: `Devoted to my work, addicted to feeling of finishing impossible tasks. Software Engineer in training. I hate reading documentation just because my boss wants me to do this super corl framewor when I know better way. Research and innovation enthusiast. Trying to connect with medical people and cooperate to deliver life-saving solutions. Hackathons are my thing. Hate wasting time. Love a good meal. Musician by heart.`,
+			},
+			skills: {
+				name: `Skills`,
+				type: types.SKILL,
+				data: [
+					["Javascript", ["TypeScript","ReactJS","npm","webpack","yarn","babel"], 90],
+					["C/C++", ["lldb","valgrind","heapusage"], 79],
+					["assembly",["Arduino","vhdl","fpga"],40],
+					[".NET",["C#","Mono","VisualBasic","Entity","NHibernate"],60],
+					["Python", ["ntlk","scipy", "Tensorflow"], 40],
+					["SQL",["Oracle", "MSSQL", "SQLite"], 40],
+					["RPA",[], 70],
+				]
+			},
+			techStack: {
+				name: `Technical Stack`,
+				type: types.STRINGARRAY,
+				data: [
+					"vim, macOS, kali linux, TypeScript, C++"
+				],
+			},
+			experience: {
+				name: `Experience`,
+				type: types.EXPEREINCE,
+				data: [
+					{
+						company: "FSP",
+						time: {
+							from: "september 2018",
+							to: "current"
+						},
+						title: "Frontend engineer",
+						tasks: "Lead integration of internal framework and added several features and functionalities and created POC project, assisting with security of the company, cooperation of desing of backend model + api"
+					},
+				]
+			},
+			funStack: {
+				name: `Fun Stack`,
+				type: types.STRINGARRAY,
+				data: [
+					"Music - guitar, singing, synthesizers",
+					"Custom synthesizers and plugin effects",
+					"Photgraphy",
+					"Neuroscience research",
+					"Reading",
+				],
+			}
+		};
+		/**
+			* Creates HTML element of given type, can have nested children
+			* First element MUST have parent element, others will nest to each other
+			*/
+		
+		function createHtmlChildElement (element, props, parent, children) {
+			var x = document.createElement(element);
+			Object.keys(props).forEach(key => x[key] = props[key]);
+			document.getElementById(parent).append(x);
+			children.forEach((c) => {
+				if(c !== undefined)
+						createHtmlChildElement(c[0],c[1], x.id, c[2] ? c[2] : []);	
+				});
+		}
+
+		function render(x) {
+			const x_id = x.name.replace(' ', '-').toLowerCase();
+			createHtmlChildElement(
+				"div", 
+				{
+					id: x.name.replace(' ', '-').toLowerCase(),
+					className: "item-container",
+				},
+				"container",
+				[
+					[
+						"div",
+						{
+							className: "item-label",
+							innerHTML: x.name,
+						},
+					],
+					[
+						"div",
+						{
+							id: x.name.replace(' ', '-').toLowerCase()+"-item",
+							className: "item"
+						}
+					],
+				],
+			);
+		switch(x.type) {
+				case types.STRING:
+					createHtmlChildElement("div", {id:x_id + "-description", innerHTML: x.data}, x_id + "-item", []);
+					break;
+				case types.STRINGARRAY:
+					createHtmlChildElement("div" ,{id:x_id + "-list"}, x_id+"-item", (x.data.map((item) => ["div", {innerHTML: item}])));
+					break;
+				case types.SKILL:
+			
+						console.log(x.data.map((item) => 
+							[
+								"div",
+								{
+									id: item[0].toLowerCase()+'-x',
+									className: "skill",
+									innerHTML:item[0]+": "+item[2]
+								},
+								[
+									[	"div",
+										{
+											className: "skill-level",
+										}
+									]].concat(item[1].map((subitem, i) => 
+									[
+										"div",
+										{
+											innerHTML: subitem,
+											className: "skill-subskill",
+										//	id: item[0].toLowerCase()+'-subitem-'+i
+										},
+									]
+								)),
+								,
+							]
+						));
+					var width = 0;
+					createHtmlChildElement(
+						"div",
+						{id: x_id + "-list"},
+						x_id+"-item",
+						(x.data.map((item) => 
+							[
+								"div",
+								{
+									id: item[0].toLowerCase()+'-x',
+									className: "skill",
+									innerHTML:item[0]+": "+item[2]
+								},
+								[
+									[	"div",
+										{
+											className: "skill-level",
+											style: "max-width:" + item[2] +"%;",
+										}
+									]
+								].concat(item[1].map((subitem, i) => 
+									[
+										"div",
+										{
+											innerHTML: subitem,
+											className: "skill-subskill",
+										//	id: item[0].toLowerCase()+'-subitem-'+i
+										},
+									]
+								))
+							]	
+						))
+					);
+					var elem = document.getElementById("progress");
+					/*
+					var id = setInterval(() => {
+						if (width >= 100) {
+							clearInterval(id);
+						} else {
+							width++; 
+							elem.style.width = width + '%'; 
+						}
+					}, 10);
+					*/
+					
+					var levels = document.getElementsByClassName("skill-level");
+					var functions = [];
+					var width = 0;
+					var intervalIds = [levels.length];
+					var widths = Array(levels.length).fill(0);
+					var i = 0;
+					function animate(i) {
+						intervalIds[i] = setInterval(function() {
+							if (widths[i] < 100) {
+								widths[i] += 1; 
+								console.log(intervalIds[i])
+								levels[i].style.width = widths[i] + "%";
+							} else {
+								clearInterval(intervalIds[i]);
+							}
+						},8);
+					}
+
+						var intervalId = setInterval(function(){
+								if(i < levels.length){
+									animate(i);
+									i++;
+								}
+								else 
+									clearInterval(intervalId);
+							}, 500);
+						
+						
+								/*
+						setInterval(function(){
+							levels[i].style.width = i + '%'}, 100);
+						levels[i].style.width = width + '%'; 
+					}
+						*/
+
+					break;
+				case types.EXPEREINCE:
+					createHtmlChildElement						
+			};
+		};
+		function executeAsynchronously(functions, timeout) {
+			for(var i = 0; i < functions.length; i++) {
+				setTimeout(functions[i], timeout);
+			}
+		}
+		render(DATA.summary);
+		render(DATA.skills);
+		render(DATA.techStack);
+		render(DATA.funStack);
+	</script>
+
+</body>
+</html>
