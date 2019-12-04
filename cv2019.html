@@ -10,10 +10,12 @@ div.cls_004{font-family:"Century Schoolbook Bold",serif;font-size:42.0px;color:r
 
 .info{
 	width:100%;
+	text-align: center;
 	font-size: large;
 	display: block;
 }
 .info-item {
+	text-align: center;
 	display: block;
 	padding: 0 0.5em;
 	margin-left: 1em;
@@ -27,18 +29,41 @@ div.cls_004{font-family:"Century Schoolbook Bold",serif;font-size:42.0px;color:r
 	width:64vw;
 	position: absolute;
 	left:32vw;
-	margin-left: 2vw;
+	margin-left: 3vw;
 }
 .initial{ 
-		margin:3px;
+		margin:0;
 		font-size: 2em;
 		font-size-adjust: initial;
 		text-align: center;
 		vertical-align: center;
 }
+.item-container {
+	display: flex;
+	text-align: right;
+	border: 3px solid palevioletred;
+}
+.item-label {
+	border: 3px solid pink;
+	width: 20vw;
+	min-width: 20vw;
+	margin-left: -24vw;
+	font-family: Didot, serif;
+}
+.item{
+	text-align: justify;
+	border: 3px solid yellow;
+	font-size: 1em;
+	width: 100%;
+	text-align: left;
+	padding-left: 3vw;
+	margin-left:3vw;
+	font-family: 'Segoe UI', sans-serif ;
+	font-weight: 100;
+}
 @media screen and (min-width: 750px){
-	.info{
-		display :inline;
+	.item{
+		width: 50vw;
 	}
 	.info-item {
 		display: inline;
@@ -56,7 +81,6 @@ div.cls_004{font-family:"Century Schoolbook Bold",serif;font-size:42.0px;color:r
 		height:20vw;
 		min-width: 150px;
 		min-height: 150px;
-		margin:3px;
 		border: 3px solid black;
 		font-size: 12vw;
 		font-size-adjust: initial;
@@ -69,7 +93,7 @@ div.cls_004{font-family:"Century Schoolbook Bold",serif;font-size:42.0px;color:r
 	position: absolute;
 	width: 20vw;
 	padding-right: 2vw;
-	border-right: 2px solid #222222;
+	border-right: 3px solid #222222;
 	height: 97vh;
 }
 
@@ -80,41 +104,21 @@ div.cls_004{font-family:"Century Schoolbook Bold",serif;font-size:42.0px;color:r
 	font-size: 1em;
 }
 
-
-
 .infobox{
 	min-height: 150px;
 	height: 22vw;
 }
 .name{
 	font-size:3em;
+	text-align: center;
 }
-.item-container {
-	display: flex;
-	text-align: right;
-	border: 3px solid palevioletred;
-}
-.item-label {
-	border: 3px solid pink;
-	width: 20vw;
-	margin-left: -23vw;
-	font-family: Didot, serif;
-}
-.item{
-	border: 3px solid yellow;
-	width: 98%;
-	font-size: 1em;
-	text-align: left;
-	padding-left: 2%;
-	font-family: Helvetica, sans-serif ;
-	font-weight: 100;
-}
+
 .skill{
-	background-color: rgba(200,200,200,0.7);
+	background-color: rgba(100,100,100,0.2);
 	margin:0.5vw 0;
-	padding-left: 2vw;
 	display:flex;
-	font-weight: 400;
+	font-weight: 100;
+	font-family: 'Segoe UI', sans-serif;
 	padding-bottom: 0.5em;;
 }
 .skill-subskill {
@@ -225,10 +229,63 @@ div.cls_009{font-family:"Century Schoolbook Bold",serif;font-size:11.0px;color:r
 							to: "current"
 						},
 						title: "Frontend engineer",
+						tasks: `\
+							Lead integration of internal framework and \
+							added several features and functionalities and created \
+							POC project, assisting with security of the company, \
+							cooperation of desing of backend model + api.\
+						`
+					},
+					{
+						company: "DHL IT Services",
+						time: {
+							from: "September 2018",
+							to: "January 2018"
+						},
+						title: "Software Analyst\/Developer",
+						tasks: `
+							Developed in-house projects and cooperated to analyze \
+							call center problems and delivered sketch of solution. \
+							Mainly javascript with c# to some degree. \
+							A lot of AI analysis and coopeartion with our Data Science team, \
+							as a group we delivered whole-day workshop on essentials of AI. \
+						`,
+						outlook: "",
+					},
+					{
+						company: "Siemens",
+						time: {
+							from: "May 2017",
+							to: "September 2017"
+						},
+						title: "RPA Developer",
+						tasks: `\
+							Desined automation of processes focused mainly on \
+							backoffice, leading developement of global accounts \
+							control. Worked mainly with UML-ish structures with \
+							several Visual Basic macros. Also a bit of scripting \
+							powershell and heavy usage of regex.\
+						`,
+						outlook: "I gained a lot of knowledge of theoretical programming, faced my first meetings, first learnt about regex",
+					}
+
+				]
+				
+				name: `Experience`,
+				type: types.EXPEREINCE,
+				data: [
+					{
+						company: "FSP",
+						time: {
+							from: "september 2018",
+							to: "current"
+						},
+						title: "Frontend engineer",
 						tasks: "Lead integration of internal framework and added several features and functionalities and created POC project, assisting with security of the company, cooperation of desing of backend model + api"
 					},
 				]
 			},
+
 			funStack: {
 				name: `Fun Stack`,
 				type: types.STRINGARRAY,
@@ -351,67 +408,38 @@ div.cls_009{font-family:"Century Schoolbook Bold",serif;font-size:11.0px;color:r
 						))
 					);
 					var elem = document.getElementById("progress");
-					/*
-					var id = setInterval(() => {
-						if (width >= 100) {
-							clearInterval(id);
-						} else {
-							width++; 
-							elem.style.width = width + '%'; 
-						}
-					}, 10);
-					*/
 					
 					var levels = document.getElementsByClassName("skill-level");
-					var functions = [];
-					var width = 0;
 					var intervalIds = [levels.length];
 					var widths = Array(levels.length).fill(0);
-					var i = 0;
 					function animate(i) {
 						intervalIds[i] = setInterval(function() {
 							if (widths[i] < 100) {
 								widths[i] += 1; 
-								console.log(intervalIds[i])
 								levels[i].style.width = widths[i] + "%";
 							} else {
 								clearInterval(intervalIds[i]);
 							}
 						},8);
 					}
-
-						var intervalId = setInterval(function(){
-								if(i < levels.length){
-									animate(i);
-									i++;
-								}
-								else 
-									clearInterval(intervalId);
-							}, 500);
-						
-						
-								/*
-						setInterval(function(){
-							levels[i].style.width = i + '%'}, 100);
-						levels[i].style.width = width + '%'; 
-					}
-						*/
-
+					var i = 0;
+					var intervalId = setInterval(function(){
+							if(i < levels.length){
+								animate(i);
+								i++;
+							}
+							else 
+								clearInterval(intervalId);
+						}, 250);
 					break;
 				case types.EXPEREINCE:
 					createHtmlChildElement						
 			};
 		};
-		function executeAsynchronously(functions, timeout) {
-			for(var i = 0; i < functions.length; i++) {
-				setTimeout(functions[i], timeout);
-			}
-		}
 		render(DATA.summary);
 		render(DATA.skills);
 		render(DATA.techStack);
 		render(DATA.funStack);
 	</script>
-
 </body>
 </html>
