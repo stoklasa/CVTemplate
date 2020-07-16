@@ -16,11 +16,13 @@
 	margin-left: 1em;
 }
 .container{ 
-	background-color: rgba(250,250,250,0.9);
+	background-color: #000000;
 	width:64vw;
 	position: absolute;
 	left:32vw;
 	margin-bottom: 5vw;
+	margin-left: -2em;
+	border-left: 2em solid rgba(255, 235, 0, 0.9) ;
 }
 .initial{ 
 	font-size: 2em;
@@ -46,18 +48,15 @@
 	padding-left:30vw;
 	margin-right: 2vw;
 	font-family: Didot, serif;
-	color: #ECECEC;
-	background: repeating-linear-gradient(
-		45deg,
-		rgba(239,41,29,1),
-		rgba(239,41,29,1) 20px,
-		rgba(19,19,19,0.5) 20px,
-		rgba(19,19,19,0.5) 40px
-	);
-	font-size: 1.7em;
+	color: #000000;
+	font-size: 3em;
+	
+	background-color: rgba(255,235,5,0.9);
+
 	padding: 1vw 1vw;
 	border-right: 0.5vw solid #ECECEC;
 }
+
 .item{
 	font-family: 'Courier New', Courier, monospace;
 	text-align: justify;
@@ -69,7 +68,7 @@
 	margin-right: 1vw;
 	padding-right: 3vw;
 	font-weight: 100;
-	border-top: 3px solid black;
+	border-top: 3px solid white;
 	padding-top: 0.5vw;
 }
 @media screen and (min-width: 750px){
@@ -78,7 +77,7 @@
 	}
 	.info-item {
 		display: inline;
-		border-right: 2px solid black;
+		border-right: 2px solid white;
 		margin: 0;
 	}
 	.initial{
@@ -126,7 +125,7 @@
 	font-weight: 100;
 }
 .skill-level {
-	border-bottom:0.3em solid #CF291D;
+	border-bottom:0.3em solid #ffee00;
 	z-index: 5;
 	position:relative;
 }
@@ -163,6 +162,7 @@
 #exp {
 	word-wrap: break-word;
 	font-family: 'Courier New', Courier, monospace;
+	font-size: 3em;
 	width:32vw; 
 	z-index: -10;
 	color:rgba(250,250,250,0.6);
@@ -175,12 +175,13 @@
 }
 body{
 	margin: auto;
+	color: white;
 }
 footer{
 	background: repeating-linear-gradient(
 		90deg,
-		#CF291D,
-		#CF291D 20px,
+		rgba(230,230,3,1),
+		rgba(230, 230,3,1), 20px,
 		#131313 20px,
 		#131313 40px
 	);
@@ -191,7 +192,7 @@ footer{
 	width: 100%;
 	height: 1vw;
 }
-}
+
 </style>
 
 </head>
@@ -211,19 +212,19 @@ footer{
 				[
 					"div",
 					{className: "left-col", id: "left-col"},
-					[	["div",{ className: "initial", innerHTML: "JH"} ], ]
+					[	["div",{ className: "initial", innerHTML: "AŽ"} ], ]
 
 				],
 				["div",{className:"container", id:"container"},
 					[
 						[
 							"div", {className:"infobox", id: "infobox"},[
-								["div", {className:"name", id:"name", innerHTML: "jindra pico hrncir"}],
+								["div", {className:"name", id:"name", innerHTML: "Adéla Žuchová"}],
 								["div",{className:"info", id: "info"},
 									[
-										["div", {className:"info-item", innerHTML:"jindrahrncir@live.com"}],
+										["div", {className:"info-item", innerHTML:"adelka@live.com"}],
 										["div", {className:"info-item", innerHTML:"608112233"}],
-										["div", {className:"info-item", innerHTML:"Praha, stresovice"}],
+										["div", {className:"info-item", innerHTML:"Šenov"}],
 									]
 								]
 							]
@@ -553,10 +554,11 @@ footer{
 			[]
 		);
 		var encodedMessage = "5DBD53F339AAE17A7BDB2985E8B7ADC4E39BD451B37BC1EAA840E88237CFC7EB877BCC305A4B2CBAE38311219D39C6C212C4A122DF4F47AE21CB527251C5D2E5".toLowerCase();
-		va = 9;
+		var adelMessage = 'ADÉLA ŽUCHOVÁ    ';
+		va = 16;
 		var renderedMessage = ""
 		for(var sha = 0; sha < va*2; sha++)
-			renderedMessage += encodedMessage;
+			renderedMessage += adelMessage;
 			/*
 		fetch("./cv2019.html", )
 			.then((res) => res.text()
